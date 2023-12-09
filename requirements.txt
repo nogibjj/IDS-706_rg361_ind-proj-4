@@ -10,4 +10,5 @@ nbqa
 
 #Project
 flask
-transformers
+requests
+
