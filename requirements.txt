@@ -9,8 +9,11 @@ nbval
 nbqa
 
 #Project
-flask
-requests
+fastapi==0.85.0
+uvicorn==0.18.3
+#others
+Flask==2.0.2
 gunicorn
-transformers
-tensorflow
+Werkzeug==2.2.2
+python-dotenv
+requests
