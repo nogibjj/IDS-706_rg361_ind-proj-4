@@ -11,4 +11,4 @@ nbqa
 #Project
 flask
 requests
-
+gunicorn
