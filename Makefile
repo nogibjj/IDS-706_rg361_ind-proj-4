@@ -11,7 +11,6 @@ lint:
 	find . -type f -name "*.ipynb" -exec nbqa ruff {} \;
 
 test:
-	python -m pytest -vv --cov=codes/project_codes codes/test_codes/*.py
-	python -m pytest --nbval codes/project_codes/*.ipynb 
+	python -m pytest -vv  test_*.py
 
 all : install test format lint
