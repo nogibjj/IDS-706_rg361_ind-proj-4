@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 import requests
+import os
 
 app = Flask(__name__)
 
@@ -20,7 +21,10 @@ def query(dropdown_value, textinput_value):
     payload = {"inputs": prompt}
     response = requests.post(API_URL, headers=headers, json=payload)
 
-    return response.json()[0]["generated_text"]
+    try:
+        return response.json()[0]["generated_text"]
+    except:
+        return "Sorry, there was an error. Please try again."
 
 
 @app.route("/")
@@ -41,4 +45,4 @@ def form():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
