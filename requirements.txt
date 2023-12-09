@@ -1,1 +1,13 @@
-# Add the Libraries and Packages Required for the Project Here, These will be installed when Codespaces is started and on "make install"
+#Devops
+black
+black_nbconvert
+pytest
+pytest-cov
+pytest-playwright
+ruff
+nbval
+nbqa
+
+#Project
+flask
+transformers
