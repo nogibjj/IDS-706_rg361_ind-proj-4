@@ -12,3 +12,5 @@ nbqa
 flask
 requests
 gunicorn
+transformers
+tensorflow

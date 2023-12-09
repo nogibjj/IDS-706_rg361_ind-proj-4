@@ -1,6 +1,11 @@
 from flask import Flask, request, render_template
 import requests
 
+# Use a pipeline as a high-level helper
+from transformers import pipeline
+
+pipe = pipeline("text2text-generation", model="grammarly/coedit-large")
+
 app = Flask(__name__)
 
 API_URL = "https://api-inference.huggingface.co/models/grammarly/coedit-large"
@@ -18,9 +23,9 @@ def query(dropdown_value, textinput_value):
     }
     prompt = dict_map[dropdown_value] + ": " + textinput_value
     payload = {"inputs": prompt}
-    response = requests.post(API_URL, headers=headers, json=payload)
+    response = pipe(prompt)
 
-    return response.json()[0]["generated_text"]
+    return response[0]["generated_text"]
 
 
 @app.route("/")
