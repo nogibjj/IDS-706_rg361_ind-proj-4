@@ -23,7 +23,7 @@ def query(dropdown_value, textinput_value):
 
     try:
         return response.json()[0]["generated_text"]
-    except:
+    except:  # noqa
         return "Sorry, there was an error. Please try again."
 
 
