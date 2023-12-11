@@ -17,6 +17,8 @@ The App can be run by the user locally or can be accessed via the link provided 
 
 The app has been hosted on ``Azure Web Apps`` via a **Dockerimage hosted on DockerHub**.
 
+![Schema](resources/Schema.png)
+
 ## Instructions
 
 ### Setup
