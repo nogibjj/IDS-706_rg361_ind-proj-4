@@ -5,7 +5,7 @@ This project contains a simple ``Flask`` app which has an ``LLM`` functionality 
 
 Link for Hosted App: [Link](https://rg361-ind4.azurewebsites.net/)
 
-Please watch the [Youtube](https://www.youtube.com/) video for additional details and walkthrough.
+Please watch the [Youtube](https://youtu.be/rVuOvAZmaas) video for additional details and walkthrough.
 
 # Overview
 The app acts as a simple interface between the user and a [LLM Model](https://huggingface.co/grammarly/coedit-large) from HuggingFace.
